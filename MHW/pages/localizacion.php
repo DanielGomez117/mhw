@@ -1,5 +1,4 @@
 <?php
-
     session_start();
     if (!isset($_SESSION['nickOrEmail'])) {
         echo "No has iniciado sesión. Redireccionando a página de login...";
@@ -9,12 +8,11 @@
         ?>
 <html>
 <head>
-<title>MHW | Galeria</title>
+<title>MHW | Dónde Estamos</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 <link rel="shortcut icon" href="../favicon.png">
-<link rel="stylesheet" type="text/css" href="../layout/styles/TitleTooltip.css">
 </head>
 <body id="top">
 <!-- ################################################################################################ -->
@@ -32,23 +30,23 @@
       <nav id="mainav" class="fl_right">
         <ul class="clear">
           <li><a href="../principal.php">Inicio</a></li>
-          <li class="active"><a class="drop" href="#">Monstruos</a>
+          <li><a class="drop">Monstruos</a>
             <ul>
-              <li class="active"><a href="gallery.php">Galeria</a></li>
+              <li><a href="gallery.php">Galería</a></li>
               <li><a href="full-width.php">Información</a></li>
             </ul>
           </li>
-          <li><a class="drop">Social</a>
+          <li class="active"><a class="drop">Social</a>
             <ul>
               <li><a href="Sugerencias.php">Buzón de Sugerencias</a></li>
               <li><a class="drop">Dónde estamos</a>
                 <ul>
-                  <li><a href="localizacion.php">Localización</a></li>
+                  <li class="active"><a href="#">Localización</a></li>
                 </ul>
               </li>
             </ul>
           </li>
-          <li><a href="#"><?php echo"".$_SESSION['nickOrEmail']; ?> <i class="fa fa-user"></i></a></li>
+          <li><a><?php echo"".$_SESSION['nickOrEmail']; ?> <i class="fa fa-user"></i></a></li>
           <li><a href="../logout.php">Desconectar <i class="fa fa-sign-out"></i></a></li>
         </ul>
       </nav>
@@ -62,8 +60,9 @@
     <div id="breadcrumb" class="hoc clear"> 
       <!-- ################################################################################################ -->
       <ul>
-        <li><a href="#">Monstruos</a></li>
-        <li><a href="#">Galeria</a></li>
+        <li><a>Social</a></li>
+        <li><a>Dónde estamos</a></li>
+        <li><a>Localización</a></li>
       </ul>
       <!-- ################################################################################################ -->
     </div>
@@ -78,45 +77,51 @@
   <main class="hoc container clear"> 
     <!-- main body -->
     <!-- ################################################################################################ -->
-    <div class="content"> 
+<div class="content"> 
+    <div id="comments">
       <!-- ################################################################################################ -->
-      <div id="gallery">
-        <figure> 
-          <header class="heading">MH: World Monstruos</header>
-          <figcaption>Pasa el ratón por encima de una imagen para ver su nombre</figcaption>
-          <p> </p>
-          <ul class="nospace clear">
-            <li class="one_half first"><a><img src="../images/demo/gallery/01.png" ><span class="green">Rathalos</span></a></li>
-            <li class="one_half"><a><img src="../images/demo/gallery/02.png" ><span class="green">Nergigante</span></a></li>
-            <li class="one_half first"><a><img src="../images/demo/gallery/03.png" ><span class="green">Radobaan</span></a></li>
-            <li class="one_half"><a><img src="../images/demo/gallery/04.png" ><span class="green">Gran Jagras</span></a></li>
-            <li class="one_half first"><a><img src="../images/demo/gallery/05.png" ><span class="green">Kirin</span></a></li>
-            <li class="one_half"><a><img src="../images/demo/gallery/06.png" ><span class="green">Deviljho</span></a></li>
-            <li class="one_half first"><a><img src="../images/demo/gallery/07.png" ><span class="green">Kushala Daora</span></a></li>
-            <li class="one_half"><a><img src="../images/demo/gallery/08.png"><span class="green">Teostra</span></a></li>
-            <li class="one_half first"><a><img src="../images/demo/gallery/09.png" ><span class="green">Paolumu</span></a></li>
-            <li class="one_half"><a><img src="../images/demo/gallery/10.png" ><span class="green">Odogaron</span></a></li>
-            <li class="one_half first"><a><img src="../images/demo/gallery/14.png" ><span class="green">Bazelgeuse</span></a></li>
-            <li class="one_half"><a><img src="../images/demo/gallery/12.png" ><span class="green">Tobi Kadachi</span></a></li>
-            <li class="one_half first"><a><img src="../images/demo/gallery/13.png" ><span class="green">Rathian</span></a></li>
-            <li class="one_half"><a><img src="../images/demo/gallery/11.png" ><span class="green">Zorah Magdaros</span></a></li>
-          </ul>
-        </figure>
-      </div>
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-      <!--<nav class="pagination">
-        <ul>
-          <li><a href="#">&laquo; Previous</a></li>
-          <li class="current"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">Next &raquo;</a></li>
-        </ul>
-      </nav>-->
-      <!-- ################################################################################################ -->
+      <h1>¿Quieres saber dónde estamos?</h1>
+      <img class="imgr borderedbox inspace-5" style="width:150px;height:150px;" src="../images/googlemaps.png" alt="">
+      <p>Somos una empresa <a>pequeña</a> que crece con tu <a>ayuda</a>, sin ti, esto no tendría ningún sentido.</p>
+      <p>Estamos en <a>Jerez de la Frontera</a>, cerca de la Plaza del Arenal.</p><br><br>
+      
+       <!-- MAPA -->
+                                <label><a>Ubicación</a></label>
+                                <div id="googleMap" style="width:100%;height:400px;"></div>
+
+                                <script>
+                                    function myMap() {
+                                        var mapProp = {
+                                            center: new google.maps.LatLng(36.682247, -6.137140),
+                                            zoom: 13,
+                                        };
+                                        //
+                                        // OBTENER LATITUD Y LONGITUD
+                                        //
+                                        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                                        google.maps.event.addListener(map, 'click', function (event) {
+                                            var latitud=event.latLng.lat();
+                                            var longitud=event.latLng.lng();
+                                            document.getElementById("latitud").value = event.latLng.lat();
+                                            document.getElementById("longitud").value = event.latLng.lng();
+                                        });
+                                        //
+                                        // PONER MARCADOR
+                                        //
+                                        var location={lat:36.682247, lng:-6.137140};
+                                        var marker = new google.maps.Marker({
+                                        position: location,
+                                        draggable: true,
+                                        map: map,
+                                        });
+                                        
+                                        }
+                                        
+                                </script>
+                                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8jPlNQ_3yfP-XDy9_vGv0fc1vok3IfiQ&callback=myMap"></script>
+
     </div>
+</div>
     <!-- ################################################################################################ -->
     <!-- / main body -->
     <div class="clear"></div>

@@ -30,27 +30,24 @@
       <nav id="mainav" class="fl_right">
         <ul class="clear">
           <li><a href="../principal.php">Inicio</a></li>
-          <li class="active"><a class="drop" href="#">Monstruos</a>
+          <li class="active"><a class="drop">Monstruos</a>
             <ul>
               <li><a href="gallery.php">Galería</a></li>
               <li class="active"><a href="full-width.php">Información</a></li>
             </ul>
           </li>
-          <li><a class="drop" href="#">Dropdown</a>
+          <li><a class="drop">Social</a>
             <ul>
-              <li><a href="#">Level 2</a></li>
-              <li><a class="drop" href="#">Level 2 + Drop</a>
+              <li><a href="Sugerencias.php">Buzón de Sugerencias</a></li>
+              <li><a class="drop">Dónde estamos</a>
                 <ul>
-                  <li><a href="#">Level 3</a></li>
-                  <li><a href="#">Level 3</a></li>
-                  <li><a href="#">Level 3</a></li>
+                  <li><a href="localizacion.php">Localización</a></li>
                 </ul>
               </li>
-              <li><a href="#">Level 2</a></li>
             </ul>
           </li>
-          <li><a href="#"><?php echo"".$_SESSION['nickOrEmail']; ?></a></li>
-          <li><a href="logout.php">Desconectar</a></li>
+          <li><a><?php echo"".$_SESSION['nickOrEmail']; ?> <i class="fa fa-user"></i></a></li>
+          <li><a href="../logout.php">Desconectar <i class="fa fa-sign-out"></i></a></li>
         </ul>
       </nav>
       <!-- ################################################################################################ -->
@@ -63,8 +60,8 @@
     <div id="breadcrumb" class="hoc clear"> 
       <!-- ################################################################################################ -->
       <ul>
-        <li><a href="#">Monstruos</a></li>
-        <li><a href="#">Información</a></li>
+        <li><a>Monstruos</a></li>
+        <li><a>Información</a></li>
       </ul>
       <!-- ################################################################################################ -->
     </div>
@@ -127,6 +124,12 @@
               <td>Munición de mortero que al caer se divide en varias cápsulas explosivas de daño en área</td>
               <td>Monstruos lentos y grandes pues se tarda en disparar este tipo de munición.<br> Ej: <a href="#" onClick="window.open('../images/demo/gallery/03.png','Radobaan','resizable,height=260,left=1500,top=350,width=370');return false">Radobaan</a>,<a href="#" onClick="window.open('../images/demo/gallery/11.png','Zorah Magdaros','resizable,height=260,left=1500,top=350,width=370');return false">Zorah Magdaros</a></td>
             </tr>
+            <tr>
+            <td><a>Explosiva</a></td>
+              <td>1-2-3</td>
+              <td>Munición se adhiere al objetivo y le asesta daño explosivo múltiples veces</td>
+              <td>Monstruos con partes frágiles que se puedan romper.<br> Ej: <a href="#" onClick="window.open('../images/demo/gallery/05.png','Kirin','resizable,height=260,left=1500,top=350,width=370');return false">Kirin</a>,<a href="#" onClick="window.open('../images/demo/gallery/02.png','Nergigante','resizable,height=260,left=1500,top=350,width=370');return false">Nergigante</a></td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -144,23 +147,29 @@
   <footer id="footer" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <div class="one_third first">
-      <h3 class="heading">Geodarn</h3>
+      <h3 class="heading">MH: World</h3>
       <ul class="faico clear">
-        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
-        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-        <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-        <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
+        <li><a class="faicon-facebook" href="https://www.facebook.com/monsterhunter/"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="faicon-twitter" href="https://twitter.com/monsterhunter?lang=es"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="faicon-google-plus" href="https://plus.google.com/communities/112618191187987333727"><i class="fa fa-google-plus"></i></a></li>
+        <li><a class="faicon-google-plus" href="https://www.youtube.com/channel/UCVS0xBpOtXBAl12rdG67-OQ"><i class="fa fa-youtube"></i></a></li>
+        <li><a class="faicon-instagram" href="https://www.instagram.com/monsterhuntergame/"><i class="fa fa-instagram"></i></a></li>
+
+      </ul>
+    </div>
+    <div class="one_third">
+      <ul class="nospace meta">
+        <li class="btmspace-15"></i></li>
+        <li></i></li>
       </ul>
     </div>
     <div class="one_third">
       <form method="post" action="#">
         <fieldset>
-          <legend>Newsletter:</legend>
+          <legend>Suscripción:</legend>
           <div class="clear">
-            <input type="text" value="" placeholder="Type Email Here&hellip;">
-            <button class="fa fa-share" type="submit" title="Submit"><em>Submit</em></button>
+            <input type="text" value="" placeholder="Email&hellip;">
+            <button class="fa fa-share"  title="Submit"><em>Submit</em></button>
           </div>
         </fieldset>
       </form>
