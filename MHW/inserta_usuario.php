@@ -1,9 +1,9 @@
 
         <?php
-          $servername = "localhost";
-          $username = "u529558136_formu";
-         $password = "trebujena";
-          $dbname = "u529558136_formu";
+          "sql201.phpzilla.net"
+          $username = "phpz_22038491";
+         $password = "1d2a3n4y";
+          $dbname = "phpz_22038491_formu";
         
         //$servername = "localhost";
         //$username = "root";

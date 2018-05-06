@@ -31,26 +31,24 @@
       <nav id="mainav" class="fl_right">
         <ul class="clear">
           <li class="active"><a href="principal.php">Inicio</a></li>
-          <li><a class="drop" href="#">Monstruos</a>
+          <li><a class="drop">Monstruos</a>
             <ul>
               <li><a href="pages/gallery.php">Galería</a></li>
               <li><a href="pages/full-width.php">Información</a></li>
             </ul>
           </li>
-          <li><a class="drop" href="#">Sobre Nosotros</a>
+          <li><a class="drop">Social</a>
             <ul>
-              <li><a href="#">Level 2</a></li>
-              <li><a class="drop" href="#">Level 2 + Drop</a>
+              <li><a href="pages/Sugerencias.php">Buzón de Sugerencias</a></li>
+              <li><a class="drop">Dónde estamos</a>
                 <ul>
-                  <li><a href="#">Level 3</a></li>
-                  <li><a href="#">Level 3</a></li>
-                  <li><a href="#">Level 3</a></li>
+                  <li><a href="pages/localizacion.php">Localización</a></li>
                 </ul>
               </li>
             </ul>
           </li>
-          <li><a href="#"><?php echo"".$_SESSION['nickOrEmail']; ?></a></li>
-          <li><a href="logout.php">Desconectar</a></li>
+          <li><a><?php echo"".$_SESSION['nickOrEmail']; ?> <i class="fa fa-user"></i></a></li>
+          <li><a href="logout.php">Desconectar <i class="fa fa-sign-out"></i></a></li>
         </ul>
       </nav>
       <!-- ################################################################################################ -->
@@ -268,7 +266,7 @@
 <div class="wrapper row5">
   <div id="copyright" class="hoc clear"> 
     <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a>Domain Name</a></p>
     <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
     <!-- ################################################################################################ -->
   </div>

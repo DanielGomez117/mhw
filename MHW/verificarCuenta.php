@@ -2,10 +2,10 @@
     session_start();
 ?>
 <?php 
-        $servername = "localhost";
-        $username = "u529558136_formu";
-        $password = "trebujena";
-        $dbname = "u529558136_formu";
+        $servername = "sql201.phpzilla.net";
+        $username = "phpz_22038491";
+       $password = "1d2a3n4y";
+        $dbname = "phpz_22038491_formu";
         
        // $servername = "localhost";
         //$username = "root";
@@ -25,7 +25,7 @@ $sqlSelect="SELECT * FROM usuarios where Usuario_bloqueado=0 and Usuario_clave='
 if ($conn->query($sqlSelect) === TRUE) {
     echo "Su cuenta ya ha sido desbloqueada o no existe";
     echo "<html><META HTTP-EQUIV='refresh' 
-            content='5;URL=login.php'></html>";
+            content='3;URL=login.php'></html>";
 } else {
     
 
@@ -39,11 +39,11 @@ if ($conn->query($sql) === TRUE) {
     //}
     echo "Su cuenta ha sido verificada correctamente";
     echo "<html><META HTTP-EQUIV='refresh' 
-            content='5;URL=login.php'></html>";
+            content='3;URL=login.php'></html>";
 } else {
     echo "Su cuenta no ha podido ser verificada";
     echo "<html><META HTTP-EQUIV='refresh' 
-            content='5;URL=login.php'></html>";
+            content='3;URL=login.php'></html>";
 }
 }
 

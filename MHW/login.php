@@ -144,9 +144,9 @@ margin-right: 25px; }
 		<div class="tabs-content">
 			<div id="signup-tab-content" class="active">
 				<form class="signup-form" action="inserta_usuario.php" method="post">
-					<input type="email" class="input" name="email" autocomplete="off" placeholder="Email">
-					<input type="text" class="input" name="nickOrEmail" autocomplete="off" placeholder="Usuario">
-					<input type="password" class="input" name="clave" autocomplete="off" placeholder="Contraseña">
+					<input type="email" class="input" name="email" autocomplete="off" placeholder="Email" required>
+					<input type="text" class="input" name="nickOrEmail" autocomplete="off" placeholder="Usuario" required>
+					<input type="password" class="input" name="clave" autocomplete="off" placeholder="Contraseña" required>
 					<input type="submit" class="button" value="Registrarse">
 				</form><!--.login-form-->
 				<div class="help-text">
@@ -157,8 +157,8 @@ margin-right: 25px; }
 
 			<div id="login-tab-content">
 				<form class="login-form" action="comprobarLogin.php" method="post">
-					<input type="text" class="input" name="nickOrEmail" autocomplete="off" placeholder="Usuario">
-					<input type="password" class="input" name="clave" autocomplete="off" placeholder="Contraseña">
+					<input type="text" class="input" name="nickOrEmail" autocomplete="off" placeholder="Usuario" required>
+					<input type="password" class="input" name="clave" autocomplete="off" placeholder="Contraseña" required>
 					
 
 					<input type="submit" class="button" value="Iniciar Sesión">
